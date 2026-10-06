@@ -1,5 +1,5 @@
 {
-  "name": "Remix Baby Growth Tracker",
+  "name": "Baby Growth Tracker",
   "description": "Interactive baby development growth tracker web app with gestational age calculation, day-by-day growth animation up to current stage, week-by-week fruit comparisons, milestones, and shareable due date URLs.",
   "requestFramePermissions": [],
   "majorCapabilities": [
