@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#32006C" />
+      <stop offset="50%" stop-color="#21004A" />
+      <stop offset="100%" stop-color="#12002E" />
+    </linearGradient>
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C084FC" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background rounded canvas -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  <circle cx="256" cy="256" r="200" fill="url(#glowGrad)" />
+
+  <!-- Outer gestational sac outline scaled into 512x512 -->
+  <g transform="translate(56, 56) scale(4)">
+    <path
+      d="M 36 62.8 C 14 94 45 98 59 98 C 79 98 83 77 83 64 C 80 26 63 4 43 4 C 18 4 14 29 28 47 C 34 55 36.6 59.2 36 60.9 Z"
+      fill="#4C0D80"
+      stroke="#C084FC"
+      stroke-width="1.5"
+      stroke-opacity="0.6"
+    />
+    <g fill="#A020F0" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8">
+      <path d="M 58 47 Q 53.4 53 55.5 57.7 C 51.4 57 51.8 55.7 36.5 60.9 V 62.8 C 50.2 56.3 52.3 60 56.2 59.3 Q 58 62 60.9 60.4 C 65 58 61 43 58 47" />
+      <path d="M 58.7 59.3 Q 52.9 53.9 50.1 59.5 Q 48.7 64.3 48.1 64.6 Q 47.2 65.3 45.2 65.3 A 1 1 0 0 0 45.5 66.3 L 45.5 66.3 L 45.5 66.3 A 1 1 0 0 0 45.8 66.7 L 45.8 66.7 L 45.8 66.8 A 1 1 0 0 0 46 67.1 L 46 67.1 L 46.1 67.4 A 1 1 0 0 0 46.9 67.4 Q 48.2 66.9 49.2 66 Q 51.2 66.5 50.1 64 Q 51.5 62.4 52.8 59.5 Q 55.3 62.5 58.9 63.1 Q 61.4 63.4 62.2 61.3 Q 64.3 57.8 64 51.8 Q 64 46.8 60.4 44.1 Q 59.1 43.2 58.6 41.5 C 56.6 29.8 41.8 36.6 46.5 44.3 Q 47.2 45.6 48.6 46 Q 49 46 49.5 47.1 Q 49.3 48.1 50.8 48.1 A 1 1 0 0 0 51.5 48.6 A 1 1 0 0 0 52.2 48.8 Q 52.1 49.2 53.4 49 Q 55.6 47.3 56 45" />
+    </g>
+  </g>
+</svg>

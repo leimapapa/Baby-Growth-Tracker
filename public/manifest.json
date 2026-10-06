@@ -1,0 +1,42 @@
+{
+  "id": "/",
+  "name": "Baby Growth Tracker & Widget",
+  "short_name": "BabyTracker",
+  "description": "Interactive baby development growth tracker and Android home screen widget with due date countdown, fetus morphing animations, and fruit size comparisons.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#12002e",
+  "theme_color": "#32006c",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Widget Studio",
+      "short_name": "Widget",
+      "description": "Open Android Widget Simulator",
+      "url": "/?view=widget",
+      "icons": [{ "src": "/icon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Baby Development",
+      "short_name": "Growth",
+      "description": "Check current week fetal progress",
+      "url": "/?view=growth",
+      "icons": [{ "src": "/icon.svg", "sizes": "192x192" }]
+    }
+  ]
+}
