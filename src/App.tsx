@@ -85,20 +85,13 @@ export default function App() {
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const dueDateFromUrl = urlParams.get('dueDate');
-    const savedDate = localStorage.getItem('savedDate');
-
-    let initialDate = '';
+    const now = new Date();
+    let initialDate = `${now.getFullYear()}-${(now.getMonth() + 1)
+      .toString()
+      .padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')}`;
 
     if (dueDateFromUrl && /^\d{4}-\d{2}-\d{2}$/.test(dueDateFromUrl)) {
       initialDate = dueDateFromUrl;
-    } else if (savedDate && /^\d{4}-\d{2}-\d{2}$/.test(savedDate)) {
-      initialDate = savedDate;
-    } else {
-      const now = new Date();
-      const futureDate = new Date(now.getTime() + 112 * 24 * 60 * 60 * 1000);
-      initialDate = `${futureDate.getFullYear()}-${(futureDate.getMonth() + 1)
-        .toString()
-        .padStart(2, '0')}-${futureDate.getDate().toString().padStart(2, '0')}`;
     }
 
     setDueDate(initialDate);
@@ -114,7 +107,6 @@ export default function App() {
   const handleDueDateChange = useCallback(
     (newDate: string) => {
       setDueDate(newDate);
-      localStorage.setItem('savedDate', newDate);
 
       // Append due date query parameter to URL for instant sharing
       try {
@@ -281,6 +273,13 @@ export default function App() {
             >
               <Calendar className="w-3.5 h-3.5 text-purple-400 shrink-0" />
               <span className="hidden sm:inline text-slate-300">Due:</span>
+              <span className="sm:hidden font-mono tabular-nums text-slate-200">
+                {new Date(`${dueDate}T00:00:00`).toLocaleDateString(undefined, {
+                  month: 'numeric',
+                  day: 'numeric',
+                  year: '2-digit',
+                })}
+              </span>
               <span className="hidden sm:inline font-mono tabular-nums text-slate-200">{dueDate}</span>
             </button>
 
