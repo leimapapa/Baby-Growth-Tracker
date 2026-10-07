@@ -34,6 +34,8 @@ export const ShareModal: React.FC<ShareModalProps> = ({
   const getShareUrl = () => {
     try {
       const url = new URL(window.location.href);
+      url.search = '';
+      url.hash = '';
       url.searchParams.set('dueDate', dueDate);
       return url.toString();
     } catch {
@@ -151,7 +153,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
           {/* Share URL input and copy button */}
           <div className="space-y-2">
             <label htmlFor="shareUrlInput" className="text-xs font-semibold text-slate-300 block">
-              Shareable Web Link (includes due date parameter)
+              Shareable Web Link (includes due date)
             </label>
             <div className="flex items-center gap-2">
               <input

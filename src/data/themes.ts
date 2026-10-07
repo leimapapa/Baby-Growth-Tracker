@@ -3,7 +3,7 @@ import { ThemeColors, ThemePreset } from '../types';
 export const THEMES: Record<ThemePreset, ThemeColors> = {
   'classic-purple': {
     id: 'classic-purple',
-    name: 'Classic Deep Violet',
+    name: 'Purple',
     bgGradient: 'from-[#1e0048] via-[#32006c] to-[#12002e]',
     cardBg: 'bg-[#2b025b]/85',
     cardBorder: 'border-purple-400/30',
@@ -17,7 +17,7 @@ export const THEMES: Record<ThemePreset, ThemeColors> = {
   },
   'material-lavender': {
     id: 'material-lavender',
-    name: 'Material You Lavender',
+    name: 'Lavender',
     bgGradient: 'from-violet-950 via-purple-900 to-indigo-950',
     cardBg: 'bg-violet-900/40',
     cardBorder: 'border-violet-300/25',
@@ -31,7 +31,7 @@ export const THEMES: Record<ThemePreset, ThemeColors> = {
   },
   'material-peach': {
     id: 'material-peach',
-    name: 'Material You Warm Peach',
+    name: 'Peach',
     bgGradient: 'from-amber-950 via-rose-950 to-orange-950',
     cardBg: 'bg-rose-900/35',
     cardBorder: 'border-rose-300/25',
@@ -45,7 +45,7 @@ export const THEMES: Record<ThemePreset, ThemeColors> = {
   },
   'material-sage': {
     id: 'material-sage',
-    name: 'Material You Botanical Sage',
+    name: 'Sage',
     bgGradient: 'from-emerald-950 via-teal-950 to-slate-950',
     cardBg: 'bg-emerald-900/35',
     cardBorder: 'border-emerald-300/25',
@@ -59,7 +59,7 @@ export const THEMES: Record<ThemePreset, ThemeColors> = {
   },
   'material-blue': {
     id: 'material-blue',
-    name: 'Material You Sky Breeze',
+    name: 'Blue',
     bgGradient: 'from-sky-950 via-blue-950 to-indigo-950',
     cardBg: 'bg-sky-900/35',
     cardBorder: 'border-sky-300/25',
@@ -73,7 +73,7 @@ export const THEMES: Record<ThemePreset, ThemeColors> = {
   },
   'oled-dark': {
     id: 'oled-dark',
-    name: 'Pixel AMOLED Midnight',
+    name: 'Black',
     bgGradient: 'from-black via-zinc-950 to-neutral-950',
     cardBg: 'bg-zinc-900/80',
     cardBorder: 'border-zinc-700/40',
