@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Calendar, X, Sparkles, Clock, Check } from 'lucide-react';
 import { TrimesterPieChart } from './TrimesterPieChart';
 
@@ -18,6 +18,10 @@ export const DueDateModal: React.FC<DueDateModalProps> = ({
   accentColor,
 }) => {
   const [selectedDate, setSelectedDate] = useState(currentDueDate);
+
+  useEffect(() => {
+    if (isOpen) setSelectedDate(currentDueDate);
+  }, [isOpen, currentDueDate]);
 
   if (!isOpen) return null;
 
