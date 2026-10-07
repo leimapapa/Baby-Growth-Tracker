@@ -243,27 +243,29 @@ export default function App() {
             <button
               type="button"
               onClick={() => setActiveTab('stage')}
-              className={`px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-all min-h-[36px] ${
+              aria-label="Baby Stage"
+              className={`justify-center px-2 sm:px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-all min-h-[36px] ${
                 activeTab === 'stage'
                   ? 'bg-purple-600 text-white shadow-md'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
               <Baby className="w-4 h-4" />
-              <span>Baby Stage</span>
+              <span className="hidden sm:inline">Baby Stage</span>
             </button>
 
             <button
               type="button"
               onClick={() => setActiveTab('timeline')}
-              className={`px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-all min-h-[36px] ${
+              aria-label="Milestones"
+              className={`justify-center px-2 sm:px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-all min-h-[36px] ${
                 activeTab === 'timeline'
                   ? 'bg-purple-600 text-white shadow-md'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
               <BookOpen className="w-4 h-4" />
-              <span>Milestones</span>
+              <span className="hidden sm:inline">Milestones</span>
             </button>
           </div>
 
@@ -273,12 +275,13 @@ export default function App() {
             <button
               type="button"
               onClick={() => setIsDueDateModalOpen(true)}
+              aria-label="Change due date"
               className="min-h-[38px] px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700/80 text-white text-xs font-semibold shadow-sm flex items-center gap-1.5 transition-colors"
               title="Change Due Date"
             >
               <Calendar className="w-3.5 h-3.5 text-purple-400 shrink-0" />
               <span className="hidden sm:inline text-slate-300">Due:</span>
-              <span className="font-mono tabular-nums text-slate-200">{dueDate}</span>
+              <span className="hidden sm:inline font-mono tabular-nums text-slate-200">{dueDate}</span>
             </button>
 
             {/* Settings Trigger (Theme Palette & Animation Options) */}
@@ -296,11 +299,11 @@ export default function App() {
             <button
               type="button"
               onClick={() => setIsShareModalOpen(true)}
-              className="min-h-[38px] px-3 sm:px-3.5 py-1.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold shadow-md flex items-center gap-1.5 transition-all active:scale-95 border border-purple-400/30 whitespace-nowrap"
+              className="min-h-[38px] px-2.5 sm:px-3.5 py-1.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold shadow-md flex items-center gap-1.5 transition-all active:scale-95 border border-purple-400/30 whitespace-nowrap"
               title="Share baby growth URL with due date"
             >
               <Share2 className="w-3.5 h-3.5 shrink-0" />
-              <span className="hidden sm:inline">Share</span>
+              <span>Share</span>
             </button>
           </div>
         </div>

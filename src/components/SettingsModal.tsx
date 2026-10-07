@@ -233,7 +233,15 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
         </div>
 
         {/* Modal Footer */}
-        <div className="p-4 bg-slate-950 border-t border-slate-800 flex justify-end">
+        <div className="p-4 bg-slate-950 border-t border-slate-800 flex items-center justify-between">
+          <a
+            href="https://ko-fi.com/leimapapa"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-slate-500 hover:text-slate-300 transition-colors"
+          >
+            Support me
+          </a>
           <button
             type="button"
             onClick={onClose}
